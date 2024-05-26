@@ -1,38 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('musical-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
 .App {
   text-align: center;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-family: 'Fredoka One', cursive; /* Funky font */
+  font-size: 3em;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inp {
+  font-size: 1.2em;
+  font-family: 'Dancing Script', cursive; /* Cursive font for input text */
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  max-width: 400px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f39c12;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #e67e22;
+  transform: scale(1.1);
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 1.2em;
+}
+
+.lyrics-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.lyrics {
+  font-size: 1.5em;
+  font-family: 'Cedarville Cursive', cursive; /* Cedarville Cursive font for lyrics */
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0 20px;
+  flex-grow: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.singer {
+  margin-right: 20px;
+}
+
+.album {
+  margin-left: 20px;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('musical-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(5px);
 }
