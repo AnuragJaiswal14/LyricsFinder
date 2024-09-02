@@ -24,6 +24,8 @@ pipeline {
             steps {
                 echo 'This is the deploy stage'
                 sh 'npm run build'
+                sh 'npm i -g pm2'
+                sh 'pm2 start serve --name "react-app" -- -s build'
             }
         }
     }
