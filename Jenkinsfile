@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    tools {
-        nodejs 'NodeJS'  // The name you gave to the NodeJS installation in Jenkins
-    }
     environment {
         name = "Anurag J"
     }
